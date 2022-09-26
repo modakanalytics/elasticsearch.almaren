@@ -33,6 +33,7 @@ class Test extends FunSuite with BeforeAndAfter {
       SaveMode.Overwrite)
     .batch
 
+  // Read Data From elasticSearch with QUery
   val df2 = almaren.builder
     .sourceElasticSearch("localhost", "9200", query = Some("?q=*"), "test", None, None,
       Map("es.nodes.wan.only" -> "true",
@@ -41,7 +42,18 @@ class Test extends FunSuite with BeforeAndAfter {
         "es.index.read.missing.as.empty" -> "yes"))
     .batch
 
+  // Read Data From elasticSearch without QUery
+  val df3 = almaren.builder
+    .sourceElasticSearch("localhost", "9200", query = None, "test", None, None,
+      Map("es.nodes.wan.only" -> "true",
+        "es.net.ssl" -> "false",
+        "es.index.auto.create" -> "yes",
+        "es.index.read.missing.as.empty" -> "yes"))
+    .batch
+
   test(df1,df2,"ElasticSearch")
+  test(df1,df3,"ElasticSearch without Query")
+
 
   def test(df1: DataFrame, df2: DataFrame, name: String): Unit = {
     testCount(df1, df2, name)
