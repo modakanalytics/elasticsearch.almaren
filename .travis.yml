@@ -1,0 +1,31 @@
+sudo: false
+
+language: scala
+
+jdk: openjdk8
+
+scala:
+  - 2.11.12
+
+script:
+  - sbt +test
+
+cache:
+  directories:
+    - $HOME/.cache/coursier
+    - $HOME/.ivy2/cache
+    - $HOME/.sbt
+
+before_cache:
+  - rm -fv $HOME/.ivy2/.sbt.ivy.lock
+  - find $HOME/.ivy2/cache -name "ivydata-*.properties" -print -delete
+  - find $HOME/.sbt        -name "*.lock"               -print -delete
+
+before_install:
+  - curl https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.6.2-amd64.deb -o elasticsearch.deb
+  - sudo dpkg -i --force-confnew elasticsearch.deb
+  - sudo chown -R elasticsearch:elasticsearch /etc/default/elasticsearch
+  - sudo service elasticsearch restart
+
+before_script:
+  - sleep 10
