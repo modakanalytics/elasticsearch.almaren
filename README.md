@@ -25,15 +25,15 @@ Connector was implemented using:
 
 Parameters:
 
-| Parameters | Description              |
-|------------|--------------------------|
-| nodes      | localhost                |
-| port       | 9200                     |
-| resource   | collection               |
-| query      | Elastic Search Query     |  
-| user       | username                 |
-| password   | password                 |
-| options    | es configuration options |
+| Parameters | Description                                                                        | Eaxmple Value         |
+|------------|------------------------------------------------------------------------------------|-----------------------|
+| nodes      | elasticsearch nodes details                                                        | localhost             |
+| port       | elasticsearch service port                                                         | 9200                  |
+| resource   | collection name to query the results                                               | myindex               |
+| query      | elasticsearch query value                                                          | ?q=*                  |  
+| user       | username of the elasticsearch service if it is associated with basic authentication | username              |
+| password   | password of the elasticsearch service if it is associated with basic authentication | password              |
+| options    | es configuration options                                                         | "es.net.ssl" -> "false" |
 
 #### Source Example
 
@@ -54,15 +54,16 @@ almaren.builder.sourceElasticSearch("localhost", "9200", query = Some("?q=*"), "
 
 Parameters:
 
-| Parameters | Description              |
-|------------|--------------------------|
-| nodes      | localhost                |
-| port       | 9200                     |
-| resource   | collection               |
-| user       | username                 |
-| password   | password                 |
-| options    | es configuration options |
-| saveMode   | SaveMode.Overwrite      |
+
+| Parameters | Description                                                                         | Eaxmple Value          |
+|------------|-------------------------------------------------------------------------------------|------------------------|
+| nodes      | elasticsearch nodes details                                                         | localhost              |
+| port       | elasticsearch service port                                                          | 9200                   |
+| resource   | collection name to query the results                                                | myindex                |
+| user       | username of the elasticsearch service if it is associated with basic authentication | username               |
+| password   | password of the elasticsearch service if it is associated with basic authentication | password               |
+| options    | es configuration options                                                            | "es.net.ssl" -> "false" |
+| saveMode   | savemode in spark dataframe                                                         | SaveMode.Overwrite                        |
 
 #### Target Example
 

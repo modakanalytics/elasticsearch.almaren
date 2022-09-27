@@ -1,3 +1,4 @@
+id,pin,area,area_full_name,name,full_city,date,week,weekday,next_day
 IRE-1,IN,Mumbai ACO NW,Mumbai_Healthcare,834 FULL,IN-MumbaiNW-834-MCD-FULL,11:30:00,Weekly,Thursday,Thursday
 IRE-1,IN,Mumbai ACO NW,Mumbai_Healthcare,834 INCR ,IN-MumbaiNW-834-MCD-INCR,11:30:00,Daily,Previous Friday,Next Wednesday
 IRE-1,IN,Mumbai ACO NW,Mumbai_Healthcare,837I,MumbaiNWIN_ENC_837I,19:30:00,Weekly,Saturday,Friday

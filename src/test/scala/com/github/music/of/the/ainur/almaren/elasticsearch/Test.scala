@@ -33,17 +33,8 @@ class Test extends FunSuite with BeforeAndAfter {
       SaveMode.Overwrite)
     .batch
 
-  // Read Data From elasticSearch with QUery
-  val df2 = almaren.builder
-    .sourceElasticSearch("localhost", "9200", query = Some("?q=*"), "test", None, None,
-      Map("es.nodes.wan.only" -> "true",
-        "es.net.ssl" -> "false",
-        "es.index.auto.create" -> "yes",
-        "es.index.read.missing.as.empty" -> "yes"))
-    .batch
-
   // Read Data From elasticSearch without QUery
-  val df3 = almaren.builder
+  val df2 = almaren.builder
     .sourceElasticSearch("localhost", "9200", query = None, "test", None, None,
       Map("es.nodes.wan.only" -> "true",
         "es.net.ssl" -> "false",
@@ -51,8 +42,21 @@ class Test extends FunSuite with BeforeAndAfter {
         "es.index.read.missing.as.empty" -> "yes"))
     .batch
 
-  test(df1,df2,"ElasticSearch")
-  test(df1,df3,"ElasticSearch without Query")
+  // Read Data From elasticSearch with QUery
+  val df3 = almaren.builder
+    .sourceElasticSearch("localhost", "9200", query = Some("?q=week:Weekly"), "test", None, None,
+      Map("es.nodes.wan.only" -> "true",
+        "es.net.ssl" -> "false",
+        "es.index.auto.create" -> "yes",
+        "es.index.read.missing.as.empty" -> "yes"))
+    .batch
+
+  //df3.coalesce(1).write.format("parquet").mode("overwrite").save(s"src/test/resources/data/elasticsearch_query_result.parquet")
+  val elasticsearch_query_results: DataFrame = spark.read.parquet(s"src/test/resources/data/elasticsearch_query_result.parquet")
+
+  test(df1, df2, "ElasticSearch without query")
+  test(df1,df2,"ElasticSearch with query q=*")
+  test(df3,elasticsearch_query_results,"ElasticSearch with query q=week:Weekly")
 
 
   def test(df1: DataFrame, df2: DataFrame, name: String): Unit = {
@@ -95,9 +99,8 @@ class Test extends FunSuite with BeforeAndAfter {
 
 
   def createSampleData(tableName: String): Unit = {
-    val res = spark.read.csv("src/test/resources/sample_data/data.csv")
+    val res = spark.read.option("header", "true").csv("src/test/resources/sample_data/data.csv")
     res.createTempView(tableName)
   }
-
 
 }
