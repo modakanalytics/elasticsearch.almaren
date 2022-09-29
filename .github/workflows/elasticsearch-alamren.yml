@@ -8,7 +8,7 @@ jobs:
       - name : Check out repository code
         uses: actions/checkout@v2
       - name: Setup ElasticSearch
-      - uses: getong/elasticsearch-action@v1.2
+        uses: getong/elasticsearch-action@v1.2
         with:
           elasticsearch version: '8.4.2'
           host port: 9200
