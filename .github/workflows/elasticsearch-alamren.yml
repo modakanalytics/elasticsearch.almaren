@@ -1,4 +1,4 @@
-name: Reactive Actors
+name: Elasticsearch Almaren
 on: [push, pull_request]
 
 jobs:
