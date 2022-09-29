@@ -7,12 +7,14 @@ jobs:
     steps:
       - name : Check out repository code
         uses: actions/checkout@v2
+      - name: Setup ElasticSearch
+        uses: getong/elasticsearch-action@v1.2
       - name: Setup JDK
         uses: actions/setup-java@v3
         with:
-          distribution: temurin
-          java-version: 8
-          cache: sbt
+            distribution: temurin
+            java-version: 8
+            cache: sbt
       - name: Build and test scala version
         run: |
           sbt ++2.11.12 test
