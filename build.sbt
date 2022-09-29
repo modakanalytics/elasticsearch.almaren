@@ -2,12 +2,10 @@ ThisBuild / name := "elasticsearch.almaren"
 ThisBuild / organization := "com.github.music-of-the-ainur"
 
 lazy val scala212 = "2.12.10"
-lazy val scala211 = "2.11.12"
 
-crossScalaVersions := Seq(scala211, scala212)
 ThisBuild / scalaVersion := scala212
 
-val sparkVersion = "2.4.8"
+val sparkVersion = "3.1.3"
 val majorVersionReg = "([0-9]+\\.[0-9]+).{0,}".r
 
 val majorVersionReg(majorVersion) = sparkVersion
