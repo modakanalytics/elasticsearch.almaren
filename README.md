@@ -4,7 +4,7 @@
 
 Add to your build:
 ```
-libraryDependencies += "com.github.music-of-the-ainur" %% "elasticsearch-almaren" % "0.0.1-3-1"
+libraryDependencies += "com.github.music-of-the-ainur" %% "elasticsearch-almaren" % "0.0.1-3.1"
 ```
 
 Example in Spark Shell
