@@ -1,6 +1,6 @@
 # Elastic Search Connector
 
-[![Build Status](https://travis-ci.com/music-of-the-ainur/elasticsearch.almaren.svg?branch=master)](https://travis-ci.com/music-of-the-ainur/elasticsearch.almaren)
+[![Build Status](https://travis-ci.com/modakanalytics/elasticsearch.almaren.svg?branch=master)](https://travis-ci.com/modakanalytics/elasticsearch.almaren)
 
 Add to your build:
 ```
