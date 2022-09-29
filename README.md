@@ -1,6 +1,6 @@
 # Elastic Search Connector
 
-[![Build Status](https://travis-ci.com/modakanalytics/elasticsearch.almaren.svg?branch=master)](https://travis-ci.com/modakanalytics/elasticsearch.almaren)
+[![Build Status](https://github.com/modakanalytics/elasticsearch.alamren/actions/workflows/reflection-githubactions.yml/badge.svg)](https://github.com/modakanalytics/elasticsearch.alamren/actions/workflows/reflection-githubactions.yml)
 
 Add to your build:
 ```
