@@ -16,7 +16,7 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion % "provided",
   "org.apache.spark" %% "spark-sql" % sparkVersion % "provided",
   "com.github.music-of-the-ainur" %% "almaren-framework" % s"0.9.5-${majorVersion}" % "provided",
-  "org.elasticsearch" %% "elasticsearch-spark-20" % "8.4.2",
+  "org.elasticsearch" %% "elasticsearch-spark-20" % "8.4.2" % "provided",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
   "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 )

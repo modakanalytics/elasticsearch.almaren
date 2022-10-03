@@ -4,12 +4,13 @@
 
 Add to your build:
 ```
-libraryDependencies += "com.github.music-of-the-ainur" %% "elasticsearch-almaren" % "0.0.1-3.2"
+libraryDependencies += "com.github.music-of-the-ainur" %% "elasticsearch-almaren" % "0.0.2-3.2"
+libraryDependencies += "org.elasticsearch" %% "elasticsearch-spark-30" % "8.4.2"
 ```
 
 Example in Spark Shell
 ```
-spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.12:0.9.5-$SPARK_VERSION,com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.1-$SPARK_VERSION"
+spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.12:0.9.5-$SPARK_VERSION,com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-$SPARK_VERSION,org.elasticsearch:elasticsearch-spark-30_2.12:8.4.2"
 ```
 
 ## Source and Target
