@@ -1,7 +1,7 @@
 ThisBuild / name := "elasticsearch.almaren"
 ThisBuild / organization := "com.github.music-of-the-ainur"
 
-lazy val scala212 = "2.12.10"
+lazy val scala212 = "2.12.15"
 
 ThisBuild / scalaVersion := scala212
 
@@ -15,10 +15,10 @@ scalacOptions ++= Seq("-deprecation", "-feature")
 libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion % "provided",
   "org.apache.spark" %% "spark-sql" % sparkVersion % "provided",
-  "com.github.music-of-the-ainur" %% "almaren-framework" % s"0.9.5-${majorVersion}" % "provided",
-  "org.elasticsearch" %% "elasticsearch-spark-20" % "8.4.2" % "provided",
-  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
-  "org.scalatest" %% "scalatest" % "3.0.5" % "test"
+  "com.github.music-of-the-ainur" %% "almaren-framework" % s"0.9.8-${majorVersion}" % "provided",
+  "org.elasticsearch" %% "elasticsearch-spark-20" % "8.4.3" % "provided",
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5",
+  "org.scalatest" %% "scalatest" % "3.2.14" % "test"
 )
 
 enablePlugins(GitVersioning)
