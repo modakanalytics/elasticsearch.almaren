@@ -1,14 +1,14 @@
 # Elastic Search Connector
 
-[![Elasticsearch Almaren](https://github.com/modakanalytics/elasticsearch.almaren/actions/workflows/elasticsearch-alamren.yml/badge.svg)](https://github.com/modakanalytics/elasticsearch.almaren/actions/workflows/elasticsearch-alamren.yml)
+[![Build-Status](https://github.com/modakanalytics/elasticsearch.almaren/actions/workflows/elasticsearch-alamren.yml/badge.svg)](https://github.com/modakanalytics/elasticsearch.almaren/actions/workflows/elasticsearch-alamren.yml)
 
-Add to your build:
+To add Elastic Search connector dependency to your sbt build::
 ```
 libraryDependencies += "com.github.music-of-the-ainur" %% "elasticsearch-almaren" % "0.0.3-3.2"
 libraryDependencies += "org.elasticsearch" %% "elasticsearch-spark-30" % "8.4.3"
 ```
 
-Example in Spark Shell
+To run in spark-shell:
 ```
 spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.12:0.9.8-3.2,com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.3-3.2,org.elasticsearch:elasticsearch-spark-30_2.12:8.4.3"
 ```
