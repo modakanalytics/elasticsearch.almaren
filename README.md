@@ -8,7 +8,7 @@ libraryDependencies += "com.github.music-of-the-ainur" %% "elasticsearch-almaren
 libraryDependencies += "org.elasticsearch" %% "elasticsearch-spark-30" % "8.4.3"
 ```
 
-To run in Spark Shell
+To run in Spark Shell:
 ```
 spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.12:0.9.8-3.1,com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.3-3.1,org.elasticsearch:elasticsearch-spark-30_2.12:8.4.3"
 ```
