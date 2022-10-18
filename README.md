@@ -1,17 +1,35 @@
 # Elastic Search Connector
 
-[![Elasticsearch Almaren](https://github.com/modakanalytics/elasticsearch.almaren/actions/workflows/elasticsearch-alamren.yml/badge.svg)](https://github.com/modakanalytics/elasticsearch.almaren/actions/workflows/elasticsearch-alamren.yml)
+[![Build Status](https://github.com/modakanalytics/elasticsearch.almaren/actions/workflows/elasticsearch-alamren.yml/badge.svg)](https://github.com/modakanalytics/elasticsearch.almaren/actions/workflows/elasticsearch-alamren.yml)
 
-Add to your build:
+To add Elastic Search connector dependency to your sbt build:
 ```
-libraryDependencies += "com.github.music-of-the-ainur" %% "elasticsearch-almaren" % "0.0.2-2-4"
+libraryDependencies += "com.github.music-of-the-ainur" %% "elasticsearch-almaren" % "0.0.2-2.4"
 libraryDependencies += "org.elasticsearch" %% "elasticsearch-spark-20" % "8.4.2"
 ```
 
-Example in Spark Shell
+To run in spark-shell:
 ```
-spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.12:0.9.5-$SPARK_VERSION,com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-$SPARK_VERSION,org.elasticsearch:elasticsearch-spark-20_2.12:8.4.2"
+spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.12:0.9.8-2.4,com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-2.4,org.elasticsearch:elasticsearch-spark-20_2.12:8.4.2"
 ```
+
+### Connector Usage
+
+#### Maven / Ivy Package Usage
+The connector is also available from the
+[Maven Central](https://mvnrepository.com/artifact/com.github.music-of-the-ainur)
+repository. It can be used using the `--packages` option or the
+`spark.jars.packages` configuration property. Use the following value
+
+| version                    | Connector Artifact                                                   |
+|----------------------------|----------------------------------------------------------------------|
+| Spark 3.3.x and scala 2.13 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.13:0.0.2-3.3` |
+| Spark 3.3.x and scala 2.12 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-3.3` |
+| Spark 3.2.x and scala 2.12 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-3.2` |
+| Spark 3.1.x and scala 2.12 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-3.1` |
+| Spark 2.4.x and scala 2.12 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-2.4` |
+| Spark 2.4.x and scala 2.11 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.11:0.0.2-2.4` |
+
 
 ## Source and Target
 
