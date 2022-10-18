@@ -4,18 +4,18 @@
 
 Add to your build:
 ```
-libraryDependencies += "com.github.music-of-the-ainur" %% "elasticsearch-almaren" % "0.0.3-3.3"
+libraryDependencies += "com.github.music-of-the-ainur" %% "elasticsearch-almaren" % "0.0.2-3.3"
 libraryDependencies += "org.elasticsearch" %% "elasticsearch-spark-30" % "8.4.2"
 ```
 
 To run in spark-shell:
 For scala-version(2.12):
 ```
-spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.12:0.9.8-3.3,com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.3-3.3,org.elasticsearch:elasticsearch-spark-30_2.12:8.4.2"
+spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.12:0.9.8-3.3,com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-3.3,org.elasticsearch:elasticsearch-spark-30_2.12:8.4.2"
 ```
 For scala-version(2.13):
 ```
-spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.13:0.9.8-3.3,com.github.music-of-the-ainur:elasticsearch-almaren_2.13:0.0.3-3.3,org.elasticsearch:elasticsearch-spark-30_2.13:8.4.2"
+spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.13:0.9.8-3.3,com.github.music-of-the-ainur:elasticsearch-almaren_2.13:0.0.2-3.3,org.elasticsearch:elasticsearch-spark-30_2.13:8.4.2"
 ```
 
 #### Maven / Ivy Package Usage
@@ -26,12 +26,12 @@ repository. It can be used using the `--packages` option or the
 
 | version                    | Connector Artifact                                                   |
 |----------------------------|----------------------------------------------------------------------|
-| Spark 3.3.x and scala 2.13 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.13:0.0.3-3.3` |
-| Spark 3.3.x and scala 2.12 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.3-3.3` |
-| Spark 3.2.x and scala 2.12 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.3-3.2` |
-| Spark 3.1.x and scala 2.12 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.3-3.1` |
-| Spark 2.4.x and scala 2.12 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.3-2.4` |
-| Spark 2.4.x and scala 2.11 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.11:0.0.3-2.4` |
+| Spark 3.3.x and scala 2.13 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.13:0.0.2-3.3` |
+| Spark 3.3.x and scala 2.12 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-3.3` |
+| Spark 3.2.x and scala 2.12 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-3.2` |
+| Spark 3.1.x and scala 2.12 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-3.1` |
+| Spark 2.4.x and scala 2.12 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-2.4` |
+| Spark 2.4.x and scala 2.11 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.11:0.0.2-2.4` |
 
 ## Source and Target
 
