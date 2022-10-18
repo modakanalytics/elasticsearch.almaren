@@ -5,12 +5,12 @@
 To add Elastic Search connector dependency to your sbt build:
 ```
 libraryDependencies += "com.github.music-of-the-ainur" %% "elasticsearch-almaren" % "0.0.2-3.1"
-libraryDependencies += "org.elasticsearch" %% "elasticsearch-spark-30" % "8.4.2"
+libraryDependencies += "org.elasticsearch" %% "elasticsearch-spark-30" % "8.4.3"
 ```
 
 To run in Spark Shell:
 ```
-spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.12:0.9.8-3.1,com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-3.1,org.elasticsearch:elasticsearch-spark-30_2.12:8.4.2"
+spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.12:0.9.8-3.1,com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-3.1,org.elasticsearch:elasticsearch-spark-30_2.12:8.4.3"
 ```
 ### Connector Usage
 
