@@ -24,8 +24,8 @@ jobs:
             cache: sbt
       - name: Build and test scala version
         run: |
-          sbt ++2.11.12 test
-          sbt ++2.12.15 test
+          sbt ++2.12.10 test
+          sbt ++2.13.9 test
           rm -rf "$HOME/.ivy2/local" || true
           find $HOME/Library/Caches/Coursier/v1        -name "ivydata-*.properties" -delete || true
           find $HOME/.ivy2/cache                       -name "ivydata-*.properties" -delete || true
