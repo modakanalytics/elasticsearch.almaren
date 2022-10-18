@@ -2,12 +2,12 @@ ThisBuild / name := "elasticsearch.almaren"
 ThisBuild / organization := "com.github.music-of-the-ainur"
 
 lazy val scala212 = "2.12.10"
-lazy val scala211 = "2.11.12"
+lazy val scala213 = "2.13.9"
 
-crossScalaVersions := Seq(scala211, scala212)
-ThisBuild / scalaVersion := scala212
+crossScalaVersions := Seq(scala212,scala213)
+ThisBuild / scalaVersion := scala213
 
-val sparkVersion = "2.4.8"
+val sparkVersion = "3.3.0"
 val majorVersionReg = "([0-9]+\\.[0-9]+).{0,}".r
 
 val majorVersionReg(majorVersion) = sparkVersion
@@ -17,10 +17,10 @@ scalacOptions ++= Seq("-deprecation", "-feature")
 libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion % "provided",
   "org.apache.spark" %% "spark-sql" % sparkVersion % "provided",
-  "com.github.music-of-the-ainur" %% "almaren-framework" % s"0.9.5-${majorVersion}" % "provided",
-  "org.elasticsearch" %% "elasticsearch-spark-20" % "8.4.2" % "provided",
-  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
-  "org.scalatest" %% "scalatest" % "3.0.5" % "test"
+  "com.github.music-of-the-ainur" %% "almaren-framework" % s"0.9.8-${majorVersion}" % "provided",
+  "org.elasticsearch" %% "elasticsearch-spark-30" % "8.4.2" % "provided",
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5",
+  "org.scalatest" %% "scalatest" % "3.2.14" % "test"
 )
 
 enablePlugins(GitVersioning)
