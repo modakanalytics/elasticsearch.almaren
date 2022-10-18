@@ -7,9 +7,10 @@ import com.github.music.of.the.ainur.almaren.builder.Core.Implicit
 import com.github.music.of.the.ainur.almaren.elasticsearch.ElasticSearch.ElasticSearchImplicit
 import org.apache.spark.sql.{DataFrame, Column}
 import org.apache.spark.sql.AnalysisException
+import org.scalatest.funsuite.AnyFunSuite
 import org.apache.spark.sql.functions._
 
-class Test extends FunSuite with BeforeAndAfter {
+class Test extends AnyFunSuite with BeforeAndAfter {
 
   val almaren = Almaren("App Test")
 
