@@ -5,22 +5,16 @@
 To add Elastic Search connector dependency to your sbt build:
 ```
 libraryDependencies += "com.github.music-of-the-ainur" %% "elasticsearch-almaren" % "0.0.2-3.1"
-libraryDependencies += "org.elasticsearch" %% "elasticsearch-spark-30" % "8.4.2"
+libraryDependencies += "org.elasticsearch" %% "elasticsearch-spark-30" % "8.4.3"
 ```
 
 To run in Spark Shell:
 ```
-spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.12:0.9.8-3.1,com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-3.1,org.elasticsearch:elasticsearch-spark-30_2.12:8.4.2"
+spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.12:0.9.8-3.1,com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-3.1,org.elasticsearch:elasticsearch-spark-30_2.12:8.4.3"
 ```
-### Connector Usage
+Elastic Search Connector is available in [Maven Central](https://mvnrepository.com/artifact/com.github.music-of-the-ainur) repository.
 
-#### Maven / Ivy Package Usage
-The connector is also available from the
-[Maven Central](https://mvnrepository.com/artifact/com.github.music-of-the-ainur)
-repository. It can be used using the `--packages` option or the
-`spark.jars.packages` configuration property. Use the following value
-
-| version                    | Connector Artifact                                                   |
+| versions                   | Connector Artifact                                                   |
 |----------------------------|----------------------------------------------------------------------|
 | Spark 3.3.x and scala 2.13 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.13:0.0.2-3.3` |
 | Spark 3.3.x and scala 2.12 | `com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-3.3` |
