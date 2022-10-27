@@ -13,13 +13,8 @@ To run in spark-shell:
 spark-shell --master local[*] --packages "com.github.music-of-the-ainur:almaren-framework_2.12:0.9.8-2.4,com.github.music-of-the-ainur:elasticsearch-almaren_2.12:0.0.2-2.4,org.elasticsearch:elasticsearch-spark-20_2.12:8.4.2"
 ```
 
-### Connector Usage
-
-#### Maven / Ivy Package Usage
-The connector is also available from the
-[Maven Central](https://mvnrepository.com/artifact/com.github.music-of-the-ainur)
-repository. It can be used using the `--packages` option or the
-`spark.jars.packages` configuration property. Use the following value
+Elastic Search Connector is available in [Maven Central](https://mvnrepository.com/artifact/com.github.music-of-the-ainur)
+repository.
 
 | version                    | Connector Artifact                                                   |
 |----------------------------|----------------------------------------------------------------------|
