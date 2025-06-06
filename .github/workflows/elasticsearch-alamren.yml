@@ -3,7 +3,7 @@ on: [push, pull_request]
 
 jobs:
   Build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name : Check out repository code
         uses: actions/checkout@v2
@@ -25,7 +25,6 @@ jobs:
       - name: Build and test scala version
         run: |
           sbt ++2.12.10 test
-          sbt ++2.13.9 test
           rm -rf "$HOME/.ivy2/local" || true
           find $HOME/Library/Caches/Coursier/v1        -name "ivydata-*.properties" -delete || true
           find $HOME/.ivy2/cache                       -name "ivydata-*.properties" -delete || true
